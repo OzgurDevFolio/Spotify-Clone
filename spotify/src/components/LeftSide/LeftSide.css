@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope&display=swap');
+
+.leftside {
+    display: flex;
+    flex: 0.3;
+    flex-direction: column;
+    background-color: #000;
+    color: lightgray;
+    padding-top: 15px;
+    padding-left: 10px;
+    font-style: 'Manrope', sans-serif !important;
+}
+
+.leftside__top {
+    display: flex;
+    flex-direction: column;
+    background-color: #121212;
+    border-radius: 15px;
+    width: 300px;
+    height: fit-content;
+    font-size: 20px;
+    padding-left: 30px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.leftside__home {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.leftside__home:hover {
+    color: #fff;
+}
+
+.leftside__icons {
+    display: flex;
+    font-size: 30px !important;
+    margin-right: 30px;
+    font-weight: bold !important;
+}
+
+.leftside__search {
+    display: flex;
+    flex-direction: row;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.leftside__search:hover {
+    color: #fff;
+}
+
+.leftside__top-text {
+    display: flex;
+    align-items: center;
+    font-size: 20px !important;
+}
+
+.leftside__bottom {
+    display: flex;
+    flex-direction: column;
+    background-color: #121212;
+    border-radius: 15px;
+    width: 300px;
+    height: fit-content;
+    font-size: 20px;
+    padding-left: 15px;
+    padding-top: 15px;
+    margin-top: 20px;
+    padding-bottom: 15px;
+}
+
+.leftside__library {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+
+#leftside__library-text {
+    margin-right: 90px;
+    cursor: 'pointer';
+    white-space: nowrap;
+}
+
+#leftside__library-text:hover {
+    color: #fff;
+}
+
+.leftside__library-icons {
+    cursor: pointer;
+    border-radius: 50%;
+    margin-right: 10px;
+    font-size: 35px !important;
+    padding: 5px;
+    transition: all 0.1s ease-in-out;
+}
+
+.leftside__library-icons:hover {
+    color: #fff;
+    background-color: #202020;
+}
+
+.leftside__library-all {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+.leftside__library-all-icons {
+    color: lightgray;
+    background-color: #202020;
+    border-radius: 50%;
+    font-size: 30px !important;
+    cursor: pointer;
+    transition: all 0.1s ease-in-out !important;
+    margin: 0px 5px;
+}
+
+.leftside__library-all-icons:hover {
+    background-color: #404040;
+    color: #fff;
+}
+
+.leftside__playlist-kinds {
+    display: flex;
+    color: #fff;
+    white-space: nowrap;
+    background-color: #202020;
+    font-size: 13px;
+    border-radius: 15px;
+    padding: 4px 10px;
+    margin-right: 5px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
+}
+
+.leftside__playlist-kinds:hover {
+    color: #fff;
+    background-color: #252525;
+}
+
+.leftside__playlist-search {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+}
+
+#leftside__playlist-searchicon {
+    display: flex;
+    text-align: center;
+    margin-right: 150px;
+    cursor: pointer;
+    font-size: 35px !important;
+    padding: 5px;
+    transition: all 0.1s ease-in-out;
+    border-radius: 50%;
+}
+
+#leftside__playlist-searchicon:hover {
+    color: #fff;
+    background-color: #202020;
+}
+
+.leftside__recent {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.leftside__recent:hover {
+    color: #fff;
+}
+
+.leftside__playlists {
+    display: flex;
+    flex-direction: column;
+}
+
+.leftside__playlist {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    border-radius: 5px;
+    margin-right: 15px;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    align-items: center;
+    transition: all 0.05s ease-in;
+}
+
+.leftside__playlist:hover {
+    background-color: #202020;
+}
+
+.leftside__playlist img {
+    width: 50px;
+    height: 50px;
+    background-position: center;
+    box-shadow: #404040;
+    border-radius: 5px;
+    margin-right: 13px;
+}
