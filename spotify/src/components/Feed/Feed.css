@@ -3,7 +3,7 @@
     flex-direction: column;
     float: left;
     width: 70%;
-    margin-left: 30px;
+    margin-left: 380px;
 }
 
 .feed__top {
@@ -218,11 +218,26 @@
     cursor: pointer;
     background-color: #141414;
     border-radius: 10px;
-    transition: all 0.2s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
 .feed__playlist:hover {
     background-color: #202020;
+}
+.feed__content-playIcon {
+    display: none;
+    visibility: hidden;
+    color: black;
+    background-color: #1db954;
+    font-size: 35px !important;
+    margin-right: 20px;
+    border-radius: 50%;
+    padding: 5px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 3px 10px rgb(0, 0, 0, 0.7);
+    transition: all 0.3s ease-in-out !important;
 }
 
 .feed__playlist:hover .feed__content-playIcon {
@@ -239,17 +254,6 @@
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
-.feed__content-playIcon {
-    display: none;
-    visibility: hidden;
-    color: black;
-    background-color: #1db954;
-    font-size: 35px !important;
-    margin-right: 20px;
-    border-radius: 50%;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 3px 10px rgb(0, 0, 0, 0.5);
-    transition: all 0.2s ease-in-out;
+.feed__content-playIcon:hover {
+    transform: scale(1.1);
 }
