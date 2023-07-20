@@ -5,13 +5,13 @@
     position: fixed;
     flex-direction: column;
     float: left;
-    width: 25%;
+    width: 20%;
     background-color: #000;
     color: lightgray;
     padding-top: 15px;
     padding-left: 10px;
     font-style: 'Manrope', sans-serif !important;
-    z-index: 10000;
+    z-index: 999;
 }
 
 .leftside__top {
@@ -75,7 +75,6 @@
     padding-top: 15px;
     margin-top: 20px;
     padding-bottom: 15px;
-    overflow-y: visible;
 }
 
 .leftside__library {
@@ -161,7 +160,7 @@
 #leftside__playlist-searchicon {
     display: flex;
     text-align: center;
-    margin-right: 150px;
+    justify-content: space-between !important;
     cursor: pointer;
     font-size: 35px !important;
     padding: 5px;
@@ -176,18 +175,47 @@
 
 .leftside__recent {
     display: flex;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
+    width: fit-content;
+    height: fit-content;
+    cursor: pointer;
+    float: right;
+    justify-content: flex-end !important;
+    align-items: flex-end !important;
+    margin-left: 160px;
 }
 
 .leftside__recent:hover {
     color: #fff;
 }
 
+.leftside__playlist-onClick__search {
+    display: none;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: #202020;
+    border-radius: 5px;
+    margin-left: -45px;
+}
+
+.leftside__playlist-onClick__search input {
+    display: none;
+    width: 180px;
+    margin-left: 0px;
+    height: 39px;
+    border-radius: 5px;
+    background-color: transparent;
+    color: lightgray;
+    margin-right: -10px;
+    outline: none;
+    border: none;
+}
+
 .leftside__playlists {
     display: flex;
     flex-direction: column;
+    width: 284px;
+    height: fit-content;
 }
 
 .leftside__playlist {
@@ -216,4 +244,35 @@
     box-shadow: #404040;
     border-radius: 5px;
     margin-right: 13px;
+}
+
+.onclick__navbar {
+    display: none;
+    flex-direction: column;
+    margin-top: 40px;
+    margin-left: -130px;
+    background-color: #212121;
+    border-radius: 5px;
+    padding: 5px;
+    text-align: left;
+    z-index: 1;
+}
+
+.onclick__navbar-text {
+    display: flex;
+    margin-top: 5px;
+    align-items: center;
+    width: 140px;
+    height: 30px;
+    padding: 10px;
+    border-radius: 3px;
+    font-size: 15px;
+    white-space: nowrap;
+    color: #ededed;
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
+}
+
+.onclick__navbar-text:hover {
+    background-color: #4f4f4f;
 }

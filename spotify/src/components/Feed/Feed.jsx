@@ -13,6 +13,8 @@ import playlist3 from '/assets/playlist3.png'
 import playlist4 from '/assets/playlist4.png'
 import playlist7 from '/assets/playlist7.png'
 import PlayArrowIcon from '@mui/icons-material/PlayArrow'
+import IosShareIcon from '@mui/icons-material/IosShare'
+import CircleIcon from '@mui/icons-material/Circle'
 import './Feed.css'
 
 const Feed = () => {
@@ -28,6 +30,21 @@ const Feed = () => {
                         <GroupsIcon className="feed__top-rightbutton" />
                         <Avatar src={ProfilePhoto} className="feed__top-rightbutton" style={{ border: '3px solid black' }} />
                     </div>
+                    {/* <div className="feed__profile-navbar">
+                        <div className="feed__profile-navbar-account">
+                            <span className="feed__profile-navbar-text">Account</span>
+                            <IosShareIcon className="navbar__icon" />
+                        </div>
+                        <span className="feed__profile-navbar-text">Profile</span>
+                        <span className="feed__profile-navbar-text">Private Session</span>
+                        <span className="feed__profile-navbar-text">Settings</span>
+                        <hr />
+                        <div className="feed__profile-navbar-update">
+                            <span className="feed__profile-navbar-text">Update Spotify Now</span>
+                            <CircleIcon className="navbar__icon" style={{ color: '#037AF0' }} />
+                        </div>
+                        <span className="feed__profile-navbar-text">Log Out</span>
+                    </div> */}
                 </div>
                 <div className="feed__content">
                     <img src={Content} alt="Billie Eilish" />

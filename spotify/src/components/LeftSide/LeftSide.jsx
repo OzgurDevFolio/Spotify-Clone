@@ -1,4 +1,5 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 import HomeIcon from '@mui/icons-material/Home'
 import SearchIcon from '@mui/icons-material/Search'
 import AddIcon from '@mui/icons-material/Add'
@@ -17,16 +18,26 @@ import playlist7 from '/assets/playlist7.png'
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown'
 import './Leftside.css'
 
-const LeftSide = () => {
+export default function LeftSide() {
+    const navigate = useNavigate()
+
+    const navigateToSearch = () => {
+        navigate('/search')
+    }
+
+    const navigateToHome = () => {
+        navigate('/home')
+    }
+
     return (
         <>
             <div className="leftside">
                 <div className="leftside__top">
-                    <div className="leftside__home">
+                    <div className="leftside__home" onClick={navigateToHome}>
                         <HomeIcon className="leftside__icons" />
                         <span className="leftside__top-text">Home</span>
                     </div>
-                    <div className="leftside__search">
+                    <div className="leftside__search" onClick={navigateToSearch}>
                         <SearchIcon className="leftside__icons" />
                         <span className="leftside__top-text">Search</span>
                     </div>
@@ -46,10 +57,23 @@ const LeftSide = () => {
                     </div>
                     <div className="leftside__playlist-search">
                         <SearchIcon id="leftside__playlist-searchicon" />
+                        <div className="leftside__playlist-onClick__search">
+                            <SearchIcon id="leftside__playlist-searchicon" />
+                            <input placeholder="Search in Your Library" />
+                        </div>
                         <div className="leftside__recent">
-                            <span id="recent__text">Recents</span>
+                            <span id="recent__text" style={{ fontSize: '18px', marginRight: '5px' }}>
+                                Recents
+                            </span>
                             <ArrowDropDownIcon id="recent__icon" />
                         </div>
+                        {/* <div className="onclick__navbar">
+                            <span style={{ marginLeft: '12px', fontSize: '12px', marginTop: '10px', color: 'gray' }}>Sort by</span>
+                            <span className="onclick__navbar-text">Recents</span>
+                            <span className="onclick__navbar-text">Recently Added</span>
+                            <span className="onclick__navbar-text">Alphabetical</span>
+                            <span className="onclick__navbar-text">Creator</span>
+                        </div> */}
                     </div>
                     <div className="leftside__playlists">
                         <div className="leftside__playlist">
@@ -94,5 +118,3 @@ const LeftSide = () => {
         </>
     )
 }
-
-export default LeftSide
