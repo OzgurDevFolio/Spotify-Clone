@@ -20,10 +20,13 @@
     "@mui/material": "^5.13.5",
     "component": "^1.1.0",
     "components": "^0.1.0",
-    "firebase": "^10.0.0",
+    "firebase": "^10.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.14.2"
+    "react-firebase-hooks": "^5.1.1",
+    "react-full-screen": "^1.1.1",
+    "react-router-dom": "^6.14.2",
+    "react-shimmer-skeleton": "^1.0.3"
   },
   "devDependencies": {
     "@types/react": "^18.2.14",
@@ -33,6 +36,7 @@
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.1",
+    "tailwindcss": "^3.3.3",
     "vite": "^4.4.0"
   }
 }

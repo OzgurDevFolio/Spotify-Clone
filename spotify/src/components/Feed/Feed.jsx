@@ -1,4 +1,4 @@
-import React from 'react'
+import { React, useState } from 'react'
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight'
 import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft'
 import GroupsIcon from '@mui/icons-material/Groups'
@@ -13,11 +13,52 @@ import playlist3 from '/assets/playlist3.png'
 import playlist4 from '/assets/playlist4.png'
 import playlist7 from '/assets/playlist7.png'
 import PlayArrowIcon from '@mui/icons-material/PlayArrow'
+import PauseIcon from '@mui/icons-material/Pause'
 import IosShareIcon from '@mui/icons-material/IosShare'
 import CircleIcon from '@mui/icons-material/Circle'
 import './Feed.css'
 
 const Feed = () => {
+    const setDisplay = () => {
+        document.querySelector('.feed__content').classList.add('clickDisplay')
+    }
+
+    const [isIconClicked, setIsIconClicked] = useState(false)
+
+    const [isIconClicked1, setIsIconClicked1] = useState(false)
+
+    const [isIconClicked2, setIsIconClicked2] = useState(false)
+
+    const [isIconClicked3, setIsIconClicked3] = useState(false)
+
+    const [isIconClicked4, setIsIconClicked4] = useState(false)
+
+    const [isIconClicked5, setIsIconClicked5] = useState(false)
+
+    const handleClick = () => {
+        setIsIconClicked(!isIconClicked)
+    }
+
+    const handleClick1 = () => {
+        setIsIconClicked1(!isIconClicked1)
+    }
+
+    const handleClick2 = () => {
+        setIsIconClicked2(!isIconClicked2)
+    }
+
+    const handleClick3 = () => {
+        setIsIconClicked3(!isIconClicked3)
+    }
+
+    const handleClick4 = () => {
+        setIsIconClicked4(!isIconClicked4)
+    }
+
+    const handleClick5 = () => {
+        setIsIconClicked5(!isIconClicked5)
+    }
+
     return (
         <>
             <div className="feed">
@@ -68,39 +109,53 @@ const Feed = () => {
                             <button className="feed__content-button">• • •</button>
                         </div>
                     </div>
-                    <button className="feed__content-announcement">Hide Announcements</button>
+                    <button onClick={setDisplay} className="feed__content-announcement">
+                        Hide Announcements
+                    </button>
                 </div>
                 <span className="feed__content-dayMessage">Good afternoon</span>
                 <div className="feed__playlists">
                     <div className="feed__playlist">
                         <img src={LikedSongs} alt="Playlist" style={{ width: '100px' }} />
                         <span>Liked Songs</span>
-                        <PlayArrowIcon className="feed__content-playIcon" />
+                        <section onClick={handleClick} className="playpause__section">
+                            {isIconClicked ? <PauseIcon className="feed__content-playIcon" /> : <PlayArrowIcon className="feed__content-playIcon" />}
+                        </section>
                     </div>
                     <div className="feed__playlist">
                         <img src={playlist1} alt="Playlist" />
                         <span>While Working</span>
-                        <PlayArrowIcon className="feed__content-playIcon" />
+                        <section onClick={handleClick1} className="playpause__section">
+                            {isIconClicked1 ? <PauseIcon className="feed__content-playIcon" /> : <PlayArrowIcon className="feed__content-playIcon" />}
+                        </section>
                     </div>
                     <div className="feed__playlist">
                         <img src={playlist4} alt="Playlist" />
                         <span>Used to Listened</span>
-                        <PlayArrowIcon className="feed__content-playIcon" />
+                        <section onClick={handleClick2} className="playpause__section">
+                            {isIconClicked2 ? <PauseIcon className="feed__content-playIcon" /> : <PlayArrowIcon className="feed__content-playIcon" />}
+                        </section>
                     </div>
                     <div className="feed__playlist">
                         <img src={playlist2} alt="Playlist" />
                         <span>Peaceful Piano</span>
-                        <PlayArrowIcon className="feed__content-playIcon" />
+                        <section onClick={handleClick3} className="playpause__section">
+                            {isIconClicked3 ? <PauseIcon className="feed__content-playIcon" /> : <PlayArrowIcon className="feed__content-playIcon" />}
+                        </section>
                     </div>
                     <div className="feed__playlist">
                         <img src={playlist3} alt="Playlist" style={{ width: '95px' }} />
                         <span>Best Classical Music</span>
-                        <PlayArrowIcon className="feed__content-playIcon" />
+                        <section onClick={handleClick4} className="playpause__section">
+                            {isIconClicked4 ? <PauseIcon className="feed__content-playIcon" /> : <PlayArrowIcon className="feed__content-playIcon" />}
+                        </section>
                     </div>
                     <div className="feed__playlist">
                         <img src={playlist7} alt="Playlist" />
                         <span>Summer Hits</span>
-                        <PlayArrowIcon className="feed__content-playIcon" />
+                        <section onClick={handleClick5} className="playpause__section">
+                            {isIconClicked5 ? <PauseIcon className="feed__content-playIcon" /> : <PlayArrowIcon className="feed__content-playIcon" />}
+                        </section>
                     </div>
                 </div>
             </div>

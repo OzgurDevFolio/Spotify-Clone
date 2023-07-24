@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 * {
     margin: 0;
@@ -12,20 +15,24 @@ body {
     font-style: 'Manrope', sans-serif;
     background-color: #000000;
     overflow-x: hidden;
+    user-select: none;
 }
 
 html::-webkit-scrollbar-track {
+    z-index: -1;
     display: none;
 }
 
 html::-webkit-scrollbar {
     width: 10px;
+    z-index: -1;
     background-color: transparent;
 }
 
 html::-webkit-scrollbar-thumb {
     border-radius: 10px;
     height: 5px !important;
+    z-index: -1;
     background-color: #787878;
     transition: all 0.2s ease-in-out;
 }

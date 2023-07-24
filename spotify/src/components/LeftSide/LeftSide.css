@@ -5,13 +5,41 @@
     position: fixed;
     flex-direction: column;
     float: left;
-    width: 20%;
+    width: 22%;
     background-color: #000;
     color: lightgray;
     padding-top: 15px;
     padding-left: 10px;
+    padding-bottom: 110px;
     font-style: 'Manrope', sans-serif !important;
-    z-index: 999;
+    top: 0;
+    bottom: 0;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    scroll-snap-type: y mandatory;
+}
+
+.leftside::-webkit-scrollbar-track {
+    display: none;
+}
+
+.leftside::-webkit-scrollbar {
+    width: 10px;
+    height: 5px;
+    margin-top: 30px;
+    background-color: transparent;
+}
+
+.leftside::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    height: 5px !important;
+    background-color: #787878;
+    transition: all 0.2s ease-in-out;
+}
+
+.leftside::-webkit-scrollbar-thumb:hover {
+    background-color: #969696;
 }
 
 .leftside__top {
@@ -154,6 +182,8 @@
 .leftside__playlist-search {
     display: flex;
     flex-direction: row;
+    width: fit-content;
+    height: fit-content;
     margin-bottom: 10px;
 }
 
@@ -165,6 +195,7 @@
     font-size: 35px !important;
     padding: 5px;
     transition: all 0.1s ease-in-out;
+    color: #fff;
     border-radius: 50%;
 }
 
@@ -215,11 +246,14 @@
     display: flex;
     flex-direction: column;
     width: 284px;
+    min-height: 500px;
     height: fit-content;
+    z-index: 1;
 }
 
 .leftside__playlist {
     display: flex;
+    position: relative;
     width: 270px;
     flex-direction: row;
     margin-top: 20px;
@@ -248,14 +282,17 @@
 
 .onclick__navbar {
     display: none;
+    position: relative;
     flex-direction: column;
+    width: fit-content;
+    height: fit-content;
     margin-top: 40px;
-    margin-left: -130px;
+    margin-left: -155px;
     background-color: #212121;
     border-radius: 5px;
     padding: 5px;
     text-align: left;
-    z-index: 1;
+    z-index: 2;
 }
 
 .onclick__navbar-text {
@@ -275,4 +312,16 @@
 
 .onclick__navbar-text:hover {
     background-color: #4f4f4f;
+}
+
+.clickFunction {
+    display: flex !important;
+}
+
+.clickFunction1 {
+    margin-top: -179px;
+}
+
+.overflow__display {
+    overflow-y: scroll;
 }

@@ -1,5 +1,5 @@
-import React from 'react'
-import { useNavigate } from 'react-router-dom'
+import { React } from 'react'
+import { useNavigate, Link } from 'react-router-dom'
 import HomeIcon from '@mui/icons-material/Home'
 import SearchIcon from '@mui/icons-material/Search'
 import AddIcon from '@mui/icons-material/Add'
@@ -29,9 +29,21 @@ export default function LeftSide() {
         navigate('/home')
     }
 
+    const navigateToPlaylist = () => {
+        navigate('/playlist')
+    }
+
+    const setDisplay = () => {
+        document.querySelector('.onclick__navbar').classList.toggle('clickFunction'), document.querySelector('.leftside__playlists').classList.toggle('clickFunction1')
+    }
+
+    const overflowDisplay = () => {
+        document.querySelector('.leftside').classList.add('overflow__display')
+    }
+
     return (
         <>
-            <div className="leftside">
+            <div className="leftside" onClick={overflowDisplay}>
                 <div className="leftside__top">
                     <div className="leftside__home" onClick={navigateToHome}>
                         <HomeIcon className="leftside__icons" />
@@ -56,59 +68,57 @@ export default function LeftSide() {
                         <KeyboardArrowRightIcon className="leftside__library-all-icons" />
                     </div>
                     <div className="leftside__playlist-search">
-                        <SearchIcon id="leftside__playlist-searchicon" />
-                        <div className="leftside__playlist-onClick__search">
+                        <Link to="/search">
                             <SearchIcon id="leftside__playlist-searchicon" />
-                            <input placeholder="Search in Your Library" />
-                        </div>
-                        <div className="leftside__recent">
+                        </Link>
+                        <div className="leftside__recent" onClick={setDisplay}>
                             <span id="recent__text" style={{ fontSize: '18px', marginRight: '5px' }}>
                                 Recents
                             </span>
                             <ArrowDropDownIcon id="recent__icon" />
                         </div>
-                        {/* <div className="onclick__navbar">
+                        <div className="onclick__navbar">
                             <span style={{ marginLeft: '12px', fontSize: '12px', marginTop: '10px', color: 'gray' }}>Sort by</span>
                             <span className="onclick__navbar-text">Recents</span>
                             <span className="onclick__navbar-text">Recently Added</span>
                             <span className="onclick__navbar-text">Alphabetical</span>
                             <span className="onclick__navbar-text">Creator</span>
-                        </div> */}
+                        </div>
                     </div>
                     <div className="leftside__playlists">
-                        <div className="leftside__playlist">
+                        <div className="leftside__playlist" onClick={navigateToPlaylist}>
                             <img src={LikedSongs} alt="Image" />
                             <span>Liked Songs</span>
                         </div>
-                        <div className="leftside__playlist">
+                        <div className="leftside__playlist" onClick={navigateToPlaylist}>
                             <img src={yourEpisodes} alt="Image" />
                             <span>Your Episodes</span>
                         </div>
-                        <div className="leftside__playlist">
+                        <div className="leftside__playlist" onClick={navigateToPlaylist}>
                             <img src={playlist1} alt="Image" />
                             <span>While Working</span>
                         </div>
-                        <div className="leftside__playlist">
+                        <div className="leftside__playlist" onClick={navigateToPlaylist}>
                             <img src={playlist4} alt="Image" />
                             <span>Used to Listened</span>
                         </div>
-                        <div className="leftside__playlist">
+                        <div className="leftside__playlist" onClick={navigateToPlaylist}>
                             <img src={playlist2} alt="Image" />
                             <span>Peaceful Piano</span>
                         </div>
-                        <div className="leftside__playlist">
+                        <div className="leftside__playlist" onClick={navigateToPlaylist}>
                             <img src={playlist3} alt="Image" />
                             <span>Best Classical Music</span>
                         </div>
-                        <div className="leftside__playlist">
+                        <div className="leftside__playlist" onClick={navigateToPlaylist}>
                             <img src={playlist5} alt="Image" />
                             <span>Concentration</span>
                         </div>
-                        <div className="leftside__playlist">
+                        <div className="leftside__playlist" onClick={navigateToPlaylist}>
                             <img src={playlist6} alt="Image" />
                             <span>Classic Essentials</span>
                         </div>
-                        <div className="leftside__playlist">
+                        <div className="leftside__playlist" onClick={navigateToPlaylist}>
                             <img src={playlist7} alt="Image" />
                             <span>Summer Hits</span>
                         </div>
