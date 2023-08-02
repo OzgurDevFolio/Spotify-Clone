@@ -16,7 +16,9 @@ import playlist5 from '/assets/playlist4.png'
 import playlist6 from '/assets/playlist5.png'
 import playlist7 from '/assets/playlist7.png'
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown'
+import VideoLibraryIcon from '@mui/icons-material/VideoLibrary'
 import './Leftside.css'
+import '../Feed/Feed.css'
 
 export default function LeftSide() {
     const navigate = useNavigate()
@@ -41,6 +43,18 @@ export default function LeftSide() {
         document.querySelector('.leftside').classList.add('overflow__display')
     }
 
+    const onclickOverflow = () => {
+        document.querySelector('.onclick__leftside').classList.add('overflow__display')
+    }
+
+    const onclickDisplay = () => {
+        document.querySelector('.leftside').classList.toggle('onclick__display'),
+            document.querySelector('.onclick__leftside').classList.toggle('onclick__display'),
+            document.querySelector('.feed').classList.toggle('feed__onclick'),
+            document.querySelector('.leftside__top').classList.toggle('onclick__display'),
+            document.querySelector('.leftside__bottom').classList.toggle('onclick__display')
+    }
+
     return (
         <>
             <div className="leftside" onClick={overflowDisplay}>
@@ -56,7 +70,9 @@ export default function LeftSide() {
                 </div>
                 <div className="leftside__bottom">
                     <div className="leftside__library">
-                        <span id="leftside__library-text">Your Library</span>
+                        <span style={{ cursor: 'pointer' }} onClick={onclickDisplay}>
+                            Your Library
+                        </span>
                         <AddIcon style={{ marginRight: '15px' }} className="leftside__library-icons" />
                         <EastIcon className="leftside__library-icons" />
                     </div>
@@ -77,7 +93,7 @@ export default function LeftSide() {
                             </span>
                             <ArrowDropDownIcon id="recent__icon" />
                         </div>
-                        <div className="onclick__navbar">
+                        <div className="onclick__navbar" onClick={overflowDisplay}>
                             <span style={{ marginLeft: '12px', fontSize: '12px', marginTop: '10px', color: 'gray' }}>Sort by</span>
                             <span className="onclick__navbar-text">Recents</span>
                             <span className="onclick__navbar-text">Recently Added</span>
@@ -122,6 +138,46 @@ export default function LeftSide() {
                             <img src={playlist7} alt="Image" />
                             <span>Summer Hits</span>
                         </div>
+                    </div>
+                </div>
+            </div>
+            <div className="onclick__leftside" onClick={onclickOverflow}>
+                <div className="onclick__leftside-links">
+                    <div className="onclick__leftside-link" onClick={navigateToHome}>
+                        <HomeIcon className="onclick__leftside-icon" />
+                    </div>
+                    <div className="onclick__leftside-link" onClick={navigateToSearch}>
+                        <SearchIcon className="onclick__leftside-icon" />
+                    </div>
+                    <div className="onclick__leftside-link">
+                        <VideoLibraryIcon className="onclick__leftside-icon" />
+                    </div>
+                    <div className="onclick__leftside-playlist" onClick={navigateToPlaylist}>
+                        <img src={LikedSongs} alt="Playlist" />
+                    </div>
+                    <div className="onclick__leftside-playlist" onClick={navigateToPlaylist}>
+                        <img src={yourEpisodes} alt="Playlist" />
+                    </div>
+                    <div className="onclick__leftside-playlist" onClick={navigateToPlaylist}>
+                        <img src={playlist1} alt="Playlist" />
+                    </div>
+                    <div className="onclick__leftside-playlist" onClick={navigateToPlaylist}>
+                        <img src={playlist2} alt="Playlist" />
+                    </div>
+                    <div className="onclick__leftside-playlist" onClick={navigateToPlaylist}>
+                        <img src={playlist3} alt="Playlist" />
+                    </div>
+                    <div className="onclick__leftside-playlist" onClick={navigateToPlaylist}>
+                        <img src={playlist4} alt="Playlist" />
+                    </div>
+                    <div className="onclick__leftside-playlist" onClick={navigateToPlaylist}>
+                        <img src={playlist5} alt="Playlist" />
+                    </div>
+                    <div className="onclick__leftside-playlist" onClick={navigateToPlaylist}>
+                        <img src={playlist6} alt="Playlist" />
+                    </div>
+                    <div className="onclick__leftside-playlist" onClick={navigateToPlaylist}>
+                        <img src={playlist7} alt="Playlist" />
                     </div>
                 </div>
             </div>

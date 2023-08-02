@@ -1,9 +1,9 @@
 .player {
     display: flex;
     position: fixed !important;
-    bottom: 0;
     color: #fff;
-    float: bottom;
+    float: bottom !important;
+    bottom: 0;
     width: 100%;
     height: 120px;
     background: #101010;
@@ -171,4 +171,10 @@
 
 .clickFunction {
     color: #1db954;
+}
+
+@media screen and (max-width: 1300px) {
+    .player__extra-buttons {
+        margin-left: -100px;
+    }
 }

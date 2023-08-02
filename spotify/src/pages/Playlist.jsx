@@ -65,12 +65,14 @@ export default function Playlist() {
                     <img src={Liked} alt="Image" />
                     <div className="playlist__content-listInformations__text">
                         <span style={{ fontSize: '20px', marginBottom: '30px' }}>Playlist</span>
-                        <span style={{ fontSize: '100px', fontWeight: 'bold' }}>Liked Songs</span>
+                        <span style={{ fontSize: '100px', fontWeight: 'bold' }} className="liked__song-title">
+                            Liked Songs
+                        </span>
                         <div className="playlist__content-text__nameinfos">
                             <Avatar src={ProfilePhoto} id="content__avatar" />
                             <span className="playlist__content-text__nameinfo">Özgür</span>
                             <span className="playlist__content-text__nameinfo">•</span>
-                            <span className="playlist__content-text__nameinfo">13 songs</span>
+                            <span className="playlist__content-text__nameinfo">10 songs</span>
                         </div>
                     </div>
                 </div>
@@ -120,7 +122,9 @@ export default function Playlist() {
                                 <span style={{ color: '#fff' }}>Experience</span>
                                 <span>Ludovico Einaudi</span>
                             </div>
-                            <span style={{ marginLeft: '-80px' }}>Underwater</span>
+                            <span style={{ marginLeft: '-80px' }} className="album__name">
+                                Underwater
+                            </span>
                             <span style={{ marginRight: '-180px' }}>2 days ago</span>
                             <FavoriteIcon style={{ color: '#1db954', marginLeft: '100px' }} />
                             <span id="song__duration">2.43</span>
@@ -132,7 +136,9 @@ export default function Playlist() {
                                 <span style={{ color: '#fff' }}>Temple White</span>
                                 <span>Ludovico Einaudi</span>
                             </div>
-                            <span style={{ marginLeft: '-80px' }}>Underwater</span>
+                            <span style={{ marginLeft: '-80px' }} className="album__name">
+                                Underwater
+                            </span>
                             <span style={{ marginRight: '-180px' }}>1 years ago</span>
                             <FavoriteIcon style={{ color: '#1db954', marginLeft: '100px' }} />
                             <span id="song__duration">2.13</span>
@@ -144,7 +150,9 @@ export default function Playlist() {
                                 <span style={{ color: '#fff' }}>Experience</span>
                                 <span>Ludovico Einaudi</span>
                             </div>
-                            <span style={{ marginLeft: '-80px' }}>Underwater</span>
+                            <span style={{ marginLeft: '-80px' }} className="album__name">
+                                Underwater
+                            </span>
                             <span style={{ marginRight: '-180px' }}>2 days ago</span>
                             <FavoriteIcon style={{ color: '#1db954', marginLeft: '100px' }} />
                             <span id="song__duration">2.43</span>
@@ -156,7 +164,9 @@ export default function Playlist() {
                                 <span style={{ color: '#fff' }}>Temple White</span>
                                 <span>Ludovico Einaudi</span>
                             </div>
-                            <span style={{ marginLeft: '-80px' }}>Underwater</span>
+                            <span style={{ marginLeft: '-80px' }} className="album__name">
+                                Underwater
+                            </span>
                             <span style={{ marginRight: '-180px' }}>1 years ago</span>
                             <FavoriteIcon style={{ color: '#1db954', marginLeft: '100px' }} />
                             <span id="song__duration">2.13</span>
@@ -168,7 +178,9 @@ export default function Playlist() {
                                 <span style={{ color: '#fff' }}>Experience</span>
                                 <span>Ludovico Einaudi</span>
                             </div>
-                            <span style={{ marginLeft: '-80px' }}>Underwater</span>
+                            <span style={{ marginLeft: '-80px' }} className="album__name">
+                                Underwater
+                            </span>
                             <span style={{ marginRight: '-180px' }}>2 days ago</span>
                             <FavoriteIcon style={{ color: '#1db954', marginLeft: '100px' }} />
                             <span id="song__duration">2.43</span>
@@ -180,7 +192,9 @@ export default function Playlist() {
                                 <span style={{ color: '#fff' }}>Temple White</span>
                                 <span>Ludovico Einaudi</span>
                             </div>
-                            <span style={{ marginLeft: '-80px' }}>Underwater</span>
+                            <span style={{ marginLeft: '-80px' }} className="album__name">
+                                Underwater
+                            </span>
                             <span style={{ marginRight: '-180px' }}>1 years ago</span>
                             <FavoriteIcon style={{ color: '#1db954', marginLeft: '100px' }} />
                             <span id="song__duration">2.13</span>
@@ -192,7 +206,9 @@ export default function Playlist() {
                                 <span style={{ color: '#fff' }}>Experience</span>
                                 <span>Ludovico Einaudi</span>
                             </div>
-                            <span style={{ marginLeft: '-80px' }}>Underwater</span>
+                            <span style={{ marginLeft: '-80px' }} className="album__name">
+                                Underwater
+                            </span>
                             <span style={{ marginRight: '-180px' }}>2 days ago</span>
                             <FavoriteIcon style={{ color: '#1db954', marginLeft: '100px' }} />
                             <span id="song__duration">2.43</span>
@@ -204,7 +220,9 @@ export default function Playlist() {
                                 <span style={{ color: '#fff' }}>Temple White</span>
                                 <span>Ludovico Einaudi</span>
                             </div>
-                            <span style={{ marginLeft: '-80px' }}>Underwater</span>
+                            <span style={{ marginLeft: '-80px' }} className="album__name">
+                                Underwater
+                            </span>
                             <span style={{ marginRight: '-180px' }}>1 years ago</span>
                             <FavoriteIcon style={{ color: '#1db954', marginLeft: '100px' }} />
                             <span id="song__duration">2.13</span>
@@ -216,7 +234,9 @@ export default function Playlist() {
                                 <span style={{ color: '#fff' }}>Experience</span>
                                 <span>Ludovico Einaudi</span>
                             </div>
-                            <span style={{ marginLeft: '-80px' }}>Underwater</span>
+                            <span style={{ marginLeft: '-80px' }} className="album__name">
+                                Underwater
+                            </span>
                             <span style={{ marginRight: '-180px' }}>2 days ago</span>
                             <FavoriteIcon style={{ color: '#1db954', marginLeft: '100px' }} />
                             <span id="song__duration">2.43</span>
@@ -228,7 +248,9 @@ export default function Playlist() {
                                 <span style={{ color: '#fff' }}>Temple White</span>
                                 <span>Ludovico Einaudi</span>
                             </div>
-                            <span style={{ marginLeft: '-80px' }}>Underwater</span>
+                            <span style={{ marginLeft: '-80px' }} className="album__name">
+                                Underwater
+                            </span>
                             <span style={{ marginRight: '-180px' }}>1 years ago</span>
                             <FavoriteIcon style={{ color: '#1db954', marginLeft: '100px' }} />
                             <span id="song__duration">2.13</span>

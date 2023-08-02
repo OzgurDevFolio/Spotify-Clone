@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope&display=swap');
+@import '../Feed/Feed.css';
 
 .leftside {
-    display: flex;
+    display: none;
     position: fixed;
     flex-direction: column;
     float: left;
@@ -13,8 +14,8 @@
     padding-bottom: 110px;
     font-style: 'Manrope', sans-serif !important;
     top: 0;
-    bottom: 0;
-    height: 100vh;
+    bottom: 0 !important;
+    height: 100vh !important;
     overflow-x: hidden;
     overflow-y: hidden;
     scroll-snap-type: y mandatory;
@@ -323,5 +324,129 @@
 }
 
 .overflow__display {
-    overflow-y: scroll;
+    overflow-y: scroll !important;
+}
+
+.onclick__leftside {
+    display: flex;
+    z-index: -1;
+    flex-direction: column;
+    width: 5%;
+    position: fixed !important;
+    float: left;
+    background-color: #121212;
+    color: lightgray;
+    padding-top: 30px !important;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 50px;
+    margin: 10px;
+    border-radius: 10px;
+    font-style: 'Manrope', sans-serif !important;
+    top: 0;
+    bottom: 0 !important;
+    height: 100vh !important;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    scroll-snap-type: y mandatory;
+}
+
+.onclick__leftside::-webkit-scrollbar-track {
+    display: none;
+}
+
+.onclick__leftside::-webkit-scrollbar {
+    width: 10px;
+    height: 5px;
+    margin-top: 30px;
+    background-color: transparent;
+}
+
+.onclick__leftside::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    height: 5px !important;
+    background-color: #787878;
+    transition: all 0.2s ease-in-out;
+}
+
+.leftside::-webkit-scrollbar-thumb:hover {
+    background-color: #969696;
+}
+
+.onclick__leftside-links {
+    width: fit-content;
+    height: fit-content;
+}
+
+.onclick__leftside-link {
+    display: flex;
+    margin-bottom: 30px;
+    margin-top: 15px;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
+    width: 100%;
+}
+
+.onclick__leftside-link:hover {
+    background-color: #242424;
+}
+
+.onclick__leftside-icon {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px !important;
+}
+
+.onclick__leftside-playlist {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    padding: 10px;
+    width: 100%;
+    transition: all 0.1s ease-in-out;
+}
+
+.onclick__leftside-playlist:hover {
+    background-color: #242424;
+}
+
+.onclick__leftside-playlist img {
+    border-radius: 10px;
+    width: 40px;
+    margin-left: -4px;
+}
+
+.feed {
+    width: 95%;
+}
+
+.onclick__display {
+    display: flex !important;
+}
+
+@media screen and (max-width: 1300) {
+    .leftside {
+        display: none !important;
+        visibility: hidden;
+    }
+
+    .leftside__top {
+        display: none !important;
+    }
+
+    .leftside__bottom {
+        display: none !important;
+    }
+
+    .onclick__leftside {
+        display: flex !important;
+    }
 }
