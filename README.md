@@ -1,3 +1,8 @@
 # Spotify-App
 
-font-style --> @import url('https://fonts.googleapis.com/css2?family=Manrope&family=Open+Sans:wght@500&display=swap');
+### It is ultimate spotify clone from our team of work
+
+### Here are some pictures of it:
+
+
+![]()
