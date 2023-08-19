@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 # Spotify-App
 
 ### It is ultimate spotify clone from our team of work
@@ -20,4 +18,3 @@
 
 
 <img width="1440" alt="ss4ofspotify" src="https://github.com/Ozgur32/Spotify-Clone/assets/121760057/a6eea285-547f-4764-af90-08c290e19eb3">
->>>>>>> 1f7b245efa9a2196d142bf6959ad8697bd113bb1
